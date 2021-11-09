@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
         --layout-max-width: 69.375rem;
         --black: #000000;
-        --black-sec: #0C0E16;
+        --black-secondary: #0C0E16;
         --white: #FFFFFF;
         --gray: #888EB0;
         --blueish-gray: #DFE3FA;

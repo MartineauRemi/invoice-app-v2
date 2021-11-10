@@ -160,11 +160,19 @@ export const DarkButton: React.FC<ButtonProps> = ({label, onClick = defaultFunct
 /*___ Styling elements for ThemeToggleButton ___*/
 
 const StylingThemeButton = styled(Button)`
-    padding: 1rem;
+    padding: 1.5rem;
     background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (min-width: 768px){
+        padding: 1.875rem;
+    }
+
+    @media screen and (min-width: 1440px){
+        padding: 2rem;
+    }
 `
 
 export const ThemeToggleButton: React.FC<ButtonProps> = () => {

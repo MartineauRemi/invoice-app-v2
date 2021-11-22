@@ -5,7 +5,7 @@ import sunIcon from '../assets/icon-sun.svg'
 import { useThemeContext } from "../contexts/ThemeProvider"
 import React from "react"
 
-interface ButtonProps {
+export interface ButtonProps {
     label?: string;
     invariant?: boolean;
     onClick?: () => void;
@@ -13,13 +13,13 @@ interface ButtonProps {
 
 const defaultFunction = () => {}
 
-const Button = styled.button<ButtonProps>`
+export const Button = styled.button<ButtonProps>`
     padding: 1rem 1.5rem;
     font-size: 0.75rem;
     line-height: 1rem;
     letter-spacing: -0.25px;
     font-weight: var(--fw-bold);
-    transition: all .2s ease-in-out;
+    transition: all .3s ease-in-out;
     cursor: pointer;
     border: none;
     border-radius: 1.5rem;
@@ -52,6 +52,10 @@ const BlueButtonWithIcon = styled(BlueButton)`
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    .text, .text *{
+        color: var(--white);
+    }
 `
 
 const IconContainer = styled.div`
@@ -67,6 +71,8 @@ const IconContainer = styled.div`
 export const NewInvoiceButton: React.FC<ButtonProps> = ({onClick = defaultFunction}) => {
     return (
         <BlueButtonWithIcon
+            data-testid='new-invoice-button'
+            className='new-invoice-button'
             onClick={() => onClick()}
         >
             <IconContainer>
@@ -78,7 +84,7 @@ export const NewInvoiceButton: React.FC<ButtonProps> = ({onClick = defaultFuncti
                     height='10px'
                 />
             </IconContainer>
-            <span>New Invoice</span>
+            <p className='text'>New <span className='mobile-hidden'>Invoice</span></p>
       </BlueButtonWithIcon>
     )
 }
@@ -185,6 +191,7 @@ export const ThemeToggleButton: React.FC<ButtonProps> = () => {
     return (
         <StylingThemeButton
             className={`theme-toggle-button theme-toggle-button--${theme}`}
+            data-testid='theme-toggle-button'
             onClick={() => onClickThemeToggleButton()}
         >
             <img

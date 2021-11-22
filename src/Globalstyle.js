@@ -41,6 +41,18 @@ const GlobalStyle = createGlobalStyle`
         --fw-medium: 500;
         --fw-bold: 700;
     }
+
+    p, em, span, strong{
+        transition: all .3s ease-in-out;
+    }
+
+    em{
+        font-style: normal;
+    }
+
+    li{
+        list-style-type: none;
+    }
 `
 
 export default GlobalStyle;

@@ -1,5 +1,4 @@
-import React from 'react'
-import { render, fireEvent, cleanup } from '@testing-library/react'
+import { render, fireEvent, cleanup, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import App from '../../App'
 import sunIcon from '../../assets/icon-sun.svg'
@@ -8,11 +7,11 @@ import moonIcon from '../../assets/icon-moon.svg'
 afterEach(() => cleanup())
 
 describe('Testing the theme toggle button', () => {
-    var button;
+    var button: HTMLElement;
 
     beforeEach(() => {
         render(<App />)
-        button = document.querySelector('.theme-toggle-button')
+        button = screen.getByTestId('theme-toggle-button')
     })
 
     test('Renders without crashing', () => {
@@ -32,7 +31,7 @@ describe('Testing the theme toggle button', () => {
 
 
     describe('Testing the theme toggle button icons', () => {
-        var icon;
+        var icon: HTMLImageElement | null;
         beforeEach(() => {
             icon = button.querySelector('img')
         })

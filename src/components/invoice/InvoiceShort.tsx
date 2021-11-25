@@ -50,6 +50,12 @@ const Wrapper = styled.div`
         border-color: var(--blue-primary);
     }
 
+    span{
+        font-size: 0.75rem;
+        line-height: 1rem;
+        letter-spacing: -0.25px;
+    }
+
     span, strong{
         text-overflow: ellipsis;
         overflow: hidden;

@@ -4,6 +4,7 @@ import Invoice from '../../interfaces'
 import iconArrowRight from "../../assets/icon-arrow-right.svg"
 import { useThemeContext } from '../../contexts/ThemeProvider'
 import InvoiceStatus from './InvoiceStatus'
+import { dateFormat } from '../../helpers/date'
 
 export default function InvoiceShort({invoice, setSelectedInvoice}: {invoice: Invoice, setSelectedInvoice: Dispatch<SetStateAction<Invoice | null>>}){
     const { theme } = useThemeContext()
@@ -20,9 +21,9 @@ export default function InvoiceShort({invoice, setSelectedInvoice}: {invoice: In
             theme={theme}
             onClick={() => onClickInvoiceShort()}
         >
-            <ID>#<em>{invoice.id}</em></ID>
-            <Date className='date' data-testid='date'>Due 19 Aug 2021</Date>
-            <Name>{invoice.clientsName}</Name>
+            <ID>#<em data-testid='invoice-short-id'>{invoice.id}</em></ID>
+            <Date className='date' data-testid='date'>Due {dateFormat(invoice.paymentDue)}</Date>
+            <Name>{invoice.client.name}</Name>
             <Total>${invoice.total}</Total>
             <InvoiceStatus status={invoice.status} />
             <ArrowIcon src={iconArrowRight} alt="" aria-hidden='true'/>

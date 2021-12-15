@@ -54,6 +54,8 @@ export default function InvoiceFilter({paidFilterActive, pendingFilterActive, dr
                     src={arrowDown}
                     alt=""
                     aria-hidden='true'
+                    width='12px'
+                    height='8px'
                 />
             </ActivationButton>
 

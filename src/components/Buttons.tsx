@@ -200,6 +200,7 @@ export const ThemeToggleButton: React.FC<ButtonProps> = () => {
             className={`theme-toggle-button theme-toggle-button--${theme}`}
             data-testid='theme-toggle-button'
             onClick={() => onClickThemeToggleButton()}
+            aria-label='theme-toggle-button'
         >
             <img
                 src={

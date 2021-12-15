@@ -10,23 +10,28 @@ const invoiceData: Invoice =    {
     "paymentDue": "2021-08-19",
     "description": "Re-branding",
     "paymentsTerms": 1,
-    "clientsName": "Jensen Huang",
-    "clientsEmail": "jensenh@mail.com",
     "status": "paid",
-    "sendersAddress": {
-      "street": "19 Union Terrace",
-      "city": "London",
-      "postCode": "E1 3EZ",
-      "country": "United Kingdom"
+    "sender": {
+      "address": {
+        "street": "19 Union Terrace",
+        "city": "London",
+        "postCode": "E1 3EZ",
+        "country": "United Kingdom"
+      }
     },
-    "clientsAddress": {
+    "client": {
+      "name": "Jensen Huang",
+      "email": "jensenh@mail.com",
+      "address": {
       "street": "106 Kendell Street",
       "city": "Sharrington",
       "postCode": "NR24 5WQ",
       "country": "United Kingdom"
+      }
     },
     "items": [
       {
+        "id": "AA001",
         "name": "Brand Guidelines",
         "quantity": 1,
         "price": 1800.90,
@@ -59,7 +64,7 @@ describe('Testing InvoiceShort component', () => {
 
     test('Displays the invoice\'s ID, client\'s name, total of invoice', () => {
         expect(short).toHaveTextContent(invoiceData.id)
-        expect(short).toHaveTextContent(invoiceData.clientsName)
+        expect(short).toHaveTextContent(invoiceData.client.name)
         expect(short).toHaveTextContent("$" + invoiceData.total)
     })
 

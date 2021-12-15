@@ -3,18 +3,15 @@ import { useThemeContext } from "../../contexts/ThemeProvider"
 
 export default function InvoiceStatus({status}: {status: string} ){
     const { theme } = useThemeContext()
-    const statusValue = (status !== 'paid' && status !== 'pending' && status !== 'draft')
-        ? 'draft'
-        : status
 
     return (
         <Wrapper
-            className={`invoice-status invoice-status--${statusValue}`}
+            className={`invoice-status invoice-status--${status}`}
             data-testid='invoice-status'
             theme={theme}
         >
             <Circle />
-            <span>{statusValue}</span>
+            <span>{status}</span>
         </Wrapper>
     )
 }
@@ -34,6 +31,10 @@ const Wrapper = styled.div`
 
     *{
         transition: all .3s ease-in-out;
+    }
+
+    span{
+        text-transform: capitalize;
     }
 
     &.invoice-status--paid{

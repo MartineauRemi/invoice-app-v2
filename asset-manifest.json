@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/invoice-app-v2/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/invoice-app-v2/static/js/main.72e4779b.chunk.js",
+    "main.js.map": "/invoice-app-v2/static/js/main.72e4779b.chunk.js.map",
+    "runtime-main.js": "/invoice-app-v2/static/js/runtime-main.4eb52338.js",
+    "runtime-main.js.map": "/invoice-app-v2/static/js/runtime-main.4eb52338.js.map",
+    "static/js/2.99d713e6.chunk.js": "/invoice-app-v2/static/js/2.99d713e6.chunk.js",
+    "static/js/2.99d713e6.chunk.js.map": "/invoice-app-v2/static/js/2.99d713e6.chunk.js.map",
+    "static/js/3.922522e1.chunk.js": "/invoice-app-v2/static/js/3.922522e1.chunk.js",
+    "static/js/3.922522e1.chunk.js.map": "/invoice-app-v2/static/js/3.922522e1.chunk.js.map",
+    "index.html": "/invoice-app-v2/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/invoice-app-v2/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.99d713e6.chunk.js.LICENSE.txt": "/invoice-app-v2/static/js/2.99d713e6.chunk.js.LICENSE.txt",
+    "static/media/icon-arrow-down.a6ed7bff.svg": "/invoice-app-v2/static/media/icon-arrow-down.a6ed7bff.svg",
+    "static/media/icon-arrow-left.e9bb7637.svg": "/invoice-app-v2/static/media/icon-arrow-left.e9bb7637.svg",
+    "static/media/icon-arrow-right.9e19be64.svg": "/invoice-app-v2/static/media/icon-arrow-right.9e19be64.svg",
+    "static/media/icon-calendar.71c99ab5.svg": "/invoice-app-v2/static/media/icon-calendar.71c99ab5.svg",
+    "static/media/icon-check.daa8ab8e.svg": "/invoice-app-v2/static/media/icon-check.daa8ab8e.svg",
+    "static/media/icon-delete.55a4f6bd.svg": "/invoice-app-v2/static/media/icon-delete.55a4f6bd.svg",
+    "static/media/icon-moon.7101c57d.svg": "/invoice-app-v2/static/media/icon-moon.7101c57d.svg",
+    "static/media/icon-plus.278c048a.svg": "/invoice-app-v2/static/media/icon-plus.278c048a.svg",
+    "static/media/icon-sun.f3da52d1.svg": "/invoice-app-v2/static/media/icon-sun.f3da52d1.svg",
+    "static/media/illustration-empty.e3122ec2.svg": "/invoice-app-v2/static/media/illustration-empty.e3122ec2.svg",
+    "static/media/logo.e8c9e71e.svg": "/invoice-app-v2/static/media/logo.e8c9e71e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4eb52338.js",
+    "static/js/2.99d713e6.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.72e4779b.chunk.js"
+  ]
+}

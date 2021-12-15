@@ -5,10 +5,10 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+        font-family: 'Spartan', sans-serif;
     }
 
     html{
-        font-family: 'Spartan', sans-serif;
 
         /*____________ VARIABLES ____________*/
         
@@ -42,6 +42,12 @@ const GlobalStyle = createGlobalStyle`
         --fw-bold: 700;
     }
 
+    p, em, span{
+        font-size: 0.75rem;
+        line-height: 1.125rem;
+        letter-spacing: -0.25px;
+    }
+
     p, em, span, strong{
         transition: all .3s ease-in-out;
     }
@@ -52,6 +58,10 @@ const GlobalStyle = createGlobalStyle`
 
     li{
         list-style-type: none;
+    }
+
+    fieldset{
+        border: none;
     }
 `
 

@@ -46,17 +46,19 @@ function getMonthChars(month: string): string{
 
 /**
  * @param date is either a string following the pattern 'yyyy-mm-dd' or a Date object
- * @returns the date as a string (e.g. 2021-01-01 => 01 jan 2021)
+ * @returns the date as a string (e.g. 2021-01-01 => 01 jan 2021),
+ * or "--/--/--" if an error occurred
  */
 export function dateFormat(date: string | Date): string{
+    const dateErrorOutput = "--/--/--"
     var dateFragments: string[];
 
     if(typeof date === 'string'){
         dateFragments = date.split('-')
         const month = getMonthChars(dateFragments[1])
-        return month === 'error'
-            ? ''
-            : dateFragments[2] + " " + getMonthChars(month) + " " + dateFragments[0]
+        return (month === 'error')
+            ? dateErrorOutput
+            : dateFragments[2] + " " + month + " " + dateFragments[0]
 
     } else if(typeof date === 'object'){
         dateFragments = date.toDateString().split(' ')
@@ -64,5 +66,5 @@ export function dateFormat(date: string | Date): string{
 
     }
     
-    return ''
+    return dateErrorOutput
 }

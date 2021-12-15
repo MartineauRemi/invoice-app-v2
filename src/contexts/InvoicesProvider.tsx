@@ -1,8 +1,8 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, createContext } from 'react'
 import data from "../data/invoices.json"
 import Invoice from '../interfaces'
 
-interface InvoicesContextInterface{
+export interface InvoicesContextInterface{
     invoices: Invoice[];
     addInvoice: (invoice: Invoice) => void;
     updateInvoice: (invoice: Invoice) => void;
@@ -12,12 +12,12 @@ interface InvoicesContextInterface{
 }
 
 const MAX_INVOICES = 1000
-const InvoicesContext = React.createContext<InvoicesContextInterface | null>(null)
+const InvoicesContext = createContext<InvoicesContextInterface>({} as InvoicesContextInterface)
 
 export const useInvoicesContext = () => useContext(InvoicesContext)
 
 export default function InvoicesProvider({children}: any){
-    const [invoices, setInvoices] = useState(data)
+    const [invoices, setInvoices] = useState<Invoice[]>(data)
 
     /**
      * @returns an invoice ID string  pattern for invoices ID: /^[A-Z]{2}[0-9]{4}$/
@@ -31,13 +31,12 @@ export default function InvoicesProvider({children}: any){
         return id += Math.floor(Math.random() * MAX_INVOICES)
     }
 
-
     /**
      * @param newInvoice invoice to add to the invoices list
      */
     function addInvoice(newInvoice: Invoice): void{
         var correspondingInvoice = invoices.find(invoice => invoice.id === newInvoice.id)
-        if(correspondingInvoice)
+        if(!correspondingInvoice)
             setInvoices([...invoices, newInvoice])
     }
 
@@ -69,7 +68,7 @@ export default function InvoicesProvider({children}: any){
         updateInvoice,
         removeInvoice,
         removeAllInvoices,
-        generateNewInvoiceId
+        generateNewInvoiceId,
     }
 
     return (

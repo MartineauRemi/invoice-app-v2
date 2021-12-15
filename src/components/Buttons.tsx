@@ -2,19 +2,22 @@ import styled, { css } from "styled-components"
 import plusIcon from '../assets/icon-plus.svg'
 import moonIcon from '../assets/icon-moon.svg'
 import sunIcon from '../assets/icon-sun.svg'
+import iconArrowLeft from '../assets/icon-arrow-left.svg'
 import { useThemeContext } from "../contexts/ThemeProvider"
-import React from "react"
+import React, { ReactNode } from "react"
 
 export interface ButtonProps {
     label?: string;
     invariant?: boolean;
-    onClick?: () => void;
+    onClick?: (args?: any) => void;
+    type?: 'submit' | 'reset' | 'button';
+    children?: ReactNode;
 }
 
 const defaultFunction = () => {}
 
 export const Button = styled.button<ButtonProps>`
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     font-size: 0.75rem;
     line-height: 1rem;
     letter-spacing: -0.25px;
@@ -23,6 +26,10 @@ export const Button = styled.button<ButtonProps>`
     cursor: pointer;
     border: none;
     border-radius: 1.5rem;
+
+    @media screen and (min-width: 768px){
+        padding: 1rem 1.5rem;
+    }
 `
 
 export const BlueButton = styled(Button)`
@@ -113,7 +120,7 @@ const StyledLightButton = styled(Button)`
     `}
 `
 
-export const LightButton: React.FC<ButtonProps> = ({label, invariant = false, onClick = defaultFunction}) => {
+export const LightButton: React.FC<ButtonProps> = ({invariant = false, onClick = defaultFunction, children}) => {
     const { theme } = useThemeContext()
 
     return (
@@ -122,7 +129,7 @@ export const LightButton: React.FC<ButtonProps> = ({label, invariant = false, on
             theme={theme}
             onClick={() => onClick()}
         >
-            {label}
+            {children}
         </StyledLightButton>
     )
 }
@@ -151,12 +158,12 @@ const StylingDarkButton = styled(Button)`
     `}
 `
 
-export const DarkButton: React.FC<ButtonProps> = ({label, onClick = defaultFunction}) => {
+export const DarkButton: React.FC<ButtonProps> = ({onClick = defaultFunction, children}) => {
     const { theme } = useThemeContext()
 
     return (
         <StylingDarkButton theme={theme} onClick={() => onClick()}>
-            {label}
+            {children}
         </StylingDarkButton>
     )
 }
@@ -206,5 +213,55 @@ export const ThemeToggleButton: React.FC<ButtonProps> = () => {
                 height='20px'
             />
         </StylingThemeButton>
+    )
+}
+
+
+/*___ Styling elements for GoBackButton ___*/
+
+const StyledGoBackButton =  styled(Button)`
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    
+    span{
+        margin-left: 1.5rem;
+    }
+
+    ${props => props.theme === 'light' && css`
+        span{
+            color: var(--black-secondary);
+
+            &:hover{
+                color: var(--blue-ternary);
+            }
+        }
+    `};
+
+    ${props => props.theme === 'dark' && css`
+        span{
+            color: var(--white);
+
+            &:hover{
+                color: var(--gray);
+            }
+        }
+    `};
+`
+
+export const GoBackButton: React.FC<ButtonProps> = ({onClick = defaultFunction}) => {
+    const { theme } = useThemeContext()
+
+    return (
+        <StyledGoBackButton
+            data-testid='go-back-button'
+            className='go-back-button'
+            onClick={() => onClick()}
+            theme={theme}
+        >
+            <img src={iconArrowLeft} alt='' aria-hidden='true' />
+            <span>Go back</span>
+        </StyledGoBackButton>
     )
 }

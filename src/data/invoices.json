@@ -5,23 +5,28 @@
       "paymentDue": "2021-08-19",
       "description": "Re-branding",
       "paymentsTerms": 1,
-      "clientsName": "Jensen Huang",
-      "clientsEmail": "jensenh@mail.com",
-      "status": "paid",
-      "sendersAddress": {
-        "street": "19 Union Terrace",
-        "city": "London",
-        "postCode": "E1 3EZ",
-        "country": "United Kingdom"
+      "client": {
+        "name": "Jensen Huang",
+        "email": "jensenh@mail.com",
+        "address": {
+          "street": "106 Kendell Street",
+          "city": "Sharrington",
+          "postCode": "NR24 5WQ",
+          "country": "United Kingdom"
+        }
       },
-      "clientsAddress": {
-        "street": "106 Kendell Street",
-        "city": "Sharrington",
-        "postCode": "NR24 5WQ",
-        "country": "United Kingdom"
+      "status": "paid",
+      "sender": {
+        "address": {
+          "street": "19 Union Terrace",
+          "city": "London",
+          "postCode": "E1 3EZ",
+          "country": "United Kingdom"
+        }
       },
       "items": [
         {
+          "id": "AA001",
           "name": "Brand Guidelines",
           "quantity": 1,
           "price": 1800.90,
@@ -36,29 +41,35 @@
       "paymentDue": "2021-09-20",
       "description": "Graphic Design",
       "paymentsTerms": 30,
-      "clientsName": "Alex Grim",
-      "clientsEmail": "alexgrim@mail.com",
       "status": "pending",
-      "sendersAddress": {
-        "street": "19 Union Terrace",
-        "city": "London",
-        "postCode": "E1 3EZ",
-        "country": "United Kingdom"
+      "sender": {
+        "address": {
+          "street": "19 Union Terrace",
+          "city": "London",
+          "postCode": "E1 3EZ",
+          "country": "United Kingdom"
+        }
       },
-      "clientsAddress": {
-        "street": "84 Church Way",
-        "city": "Bradford",
-        "postCode": "BD1 9PB",
-        "country": "United Kingdom"
+      "client": {
+        "name": "Alex Grim",
+        "email": "alexgrim@mail.com",
+        "address": {
+          "street": "84 Church Way",
+          "city": "Bradford",
+          "postCode": "BD1 9PB",
+          "country": "United Kingdom"
+        }
       },
       "items": [
         {
+          "id": "AA002",
           "name": "Banner Design",
           "quantity": 1,
           "price": 156.00,
           "total": 156.00
         },
         {
+          "id": "AA003",
           "name": "Email Design",
           "quantity": 2,
           "price": 200.00,
@@ -73,23 +84,28 @@
       "paymentDue": "2021-10-01",
       "description": "Website Redesign",
       "paymentsTerms": 7,
-      "clientsName": "John Morrison",
-      "clientsEmail": "jm@myco.com",
       "status": "paid",
-      "sendersAddress": {
-        "street": "19 Union Terrace",
-        "city": "London",
-        "postCode": "E1 3EZ",
-        "country": "United Kingdom"
+      "sender": {
+        "address": {
+          "street": "19 Union Terrace",
+          "city": "London",
+          "postCode": "E1 3EZ",
+          "country": "United Kingdom"
+        }
       },
-      "clientsAddress": {
-        "street": "79 Dover Road",
-        "city": "Westhall",
-        "postCode": "IP19 3PF",
-        "country": "United Kingdom"
+      "client": {
+        "name": "John Morrison",
+        "email": "jm@myco.com",
+        "address": {
+          "street": "79 Dover Road",
+          "city": "Westhall",
+          "postCode": "IP19 3PF",
+          "country": "United Kingdom"
+        }
       },
       "items": [
         {
+          "id": "AA004",
           "name": "Website Redesign",
           "quantity": 1,
           "price": 14002.33,
@@ -104,23 +120,28 @@
       "paymentDue": "2021-10-12",
       "description": "Logo Concept",
       "paymentsTerms": 1,
-      "clientsName": "Alysa Werner",
-      "clientsEmail": "alysa@email.co.uk",
       "status": "pending",
-      "sendersAddress": {
-        "street": "19 Union Terrace",
-        "city": "London",
-        "postCode": "E1 3EZ",
-        "country": "United Kingdom"
+      "sender": {
+        "address": {
+          "street": "19 Union Terrace",
+          "city": "London",
+          "postCode": "E1 3EZ",
+          "country": "United Kingdom"
+        }
       },
-      "clientsAddress": {
-        "street": "63 Warwick Road",
-        "city": "Carlisle",
-        "postCode": "CA20 2TG",
-        "country": "United Kingdom"
+      "client": {
+        "name": "Alysa Werner",
+        "email": "alysa@email.co.uk",
+        "address": {
+          "street": "63 Warwick Road",
+          "city": "Carlisle",
+          "postCode": "CA20 2TG",
+          "country": "United Kingdom"
+        }
       },
       "items": [
         {
+          "id": "AA005",
           "name": "Logo Sketches",
           "quantity": 1,
           "price": 102.04,
@@ -135,29 +156,35 @@
       "paymentDue": "2021-10-14",
       "description": "Re-branding",
       "paymentsTerms": 7,
-      "clientsName": "Mellisa Clarke",
-      "clientsEmail": "mellisa.clarke@example.com",
       "status": "pending",
-      "sendersAddress": {
-        "street": "19 Union Terrace",
-        "city": "London",
-        "postCode": "E1 3EZ",
-        "country": "United Kingdom"
+      "sender": {
+        "address": {
+          "street": "19 Union Terrace",
+          "city": "London",
+          "postCode": "E1 3EZ",
+          "country": "United Kingdom"
+        }
       },
-      "clientsAddress": {
-        "street": "46 Abbey Row",
-        "city": "Cambridge",
-        "postCode": "CB5 6EG",
-        "country": "United Kingdom"
+      "client": {
+        "name": "Mellisa Clarke",
+        "email": "mellisa.clarke@example.com",
+        "address": {
+          "street": "46 Abbey Row",
+          "city": "Cambridge",
+          "postCode": "CB5 6EG",
+          "country": "United Kingdom"
+        }
       },
       "items": [
         {
+          "id": "AA006",
           "name": "New Logo",
           "quantity": 1,
           "price": 1532.33,
           "total": 1532.33
         },
         {
+          "id": "AA007",
           "name": "Brand Guidelines",
           "quantity": 1,
           "price": 2500.00,
@@ -172,23 +199,28 @@
       "paymentDue": "2021-10-31",
       "description": "Landing Page Design",
       "paymentsTerms": 30,
-      "clientsName": "Thomas Wayne",
-      "clientsEmail": "thomas@dc.com",
       "status": "pending",
-      "sendersAddress": {
-        "street": "19 Union Terrace",
-        "city": "London",
-        "postCode": "E1 3EZ",
-        "country": "United Kingdom"
+      "sender": {
+        "address": {
+          "street": "19 Union Terrace",
+          "city": "London",
+          "postCode": "E1 3EZ",
+          "country": "United Kingdom"
+        }
       },
-      "clientsAddress": {
-        "street": "3964  Queens Lane",
-        "city": "Gotham",
-        "postCode": "60457",
-        "country": "United States of America"
+      "client": {
+        "name": "Thomas Wayne",
+        "email": "thomas@dc.com",
+        "address": {
+          "street": "3964  Queens Lane",
+          "city": "Gotham",
+          "postCode": "60457",
+          "country": "United States of America"
+        }
       },
       "items": [
         {
+          "id": "AA008",
           "name": "Web Design",
           "quantity": 1,
           "price": 6155.91,
@@ -203,23 +235,28 @@
       "paymentDue": "2021-11-12",
       "description": "Logo Re-design",
       "paymentsTerms": 7,
-      "clientsName": "Anita Wainwright",
-      "clientsEmail": "",
       "status": "draft",
-      "sendersAddress": {
-        "street": "19 Union Terrace",
-        "city": "London",
-        "postCode": "E1 3EZ",
-        "country": "United Kingdom"
+      "sender": {
+        "address": {
+          "street": "19 Union Terrace",
+          "city": "London",
+          "postCode": "E1 3EZ",
+          "country": "United Kingdom"
+        }
       },
-      "clientsAddress": {
-        "street": "",
-        "city": "",
-        "postCode": "",
-        "country": ""
+      "client": {
+        "name": "Anita Wainwright",
+        "email": "",
+        "address": {
+          "street": "",
+          "city": "",
+          "postCode": "",
+          "country": ""
+        }
       },
       "items": [
         {
+          "id": "AA009",
           "name": "Logo Re-design",
           "quantity": 1,
           "price": 3102.04,
